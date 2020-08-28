@@ -42,7 +42,7 @@ body {
 .header {
   position: fixed;
   width: 100vw;
-  height: 6rem;
+  height: 7rem;
   padding: 0.8rem 2rem;
 
   display: flex;
@@ -76,7 +76,7 @@ body {
   font-size: 1.8rem;
 }
 
-.header .button {
+.header__button {
   display: none;
 }
 
@@ -90,7 +90,6 @@ body {
 
 .section__mockups {
   position: absolute;
-  width: 100vw;
   height: 100%;
 
   top: -120px;
@@ -133,6 +132,20 @@ body {
 
 .section__why__easybank article {
   margin-top: 3.4rem;  
+}
+
+.section__why__easybank {
+  display: flex;
+  flex-direction: column;
+}
+
+.because__easybank {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 350px));
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
 }
 
 .why__easybank__title {
@@ -203,4 +216,118 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
+}
+
+.logo__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-neutral-white);
+  margin-bottom: 1rem;
+}
+
+.social__medias {
+  display: flex;
+  width: 50vw;
+  justify-content: space-evenly;
+}
+
+.about__us a {
+  width: 100%;
+  display: block;
+  font-size: 1.4rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-neutral-white);
+  margin-bottom: 0.8rem;
+}
+
+.social__medias,
+.about__us,
+.request__invite {
+  margin: 1rem 0;
+  list-style: none;
+}
+
+.copyright {
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--color-neutral-blue);
+}
+
+@media (min-width: 600px) {
+  .header__toggle {
+    display: none;
+  }
+
+  .header__ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 55vw;
+  }
+}
+
+@media (min-width: 800px) {
+  .header__button {
+    display: initial;
+    width: 12rem;
+    height: 4rem;
+    font-size: 1.4rem;
+    margin: 0 2.6rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .intro__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "join_us intro";
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section__intro {
+    width: 100%;
+    grid-area: intro;
+  }
+
+  .join__us .content {
+    padding: 0;
+  }
+  
+  .join__us {
+    min-width: 320px;
+    margin: 0 3rem;
+    align-items: initial;
+    text-align: left;
+    grid-area: join_us;
+    padding: 0 2.4rem;
+  }
+
+  .section__background {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-width: 430px;
+    min-height: 400px;
+    
+    top: -10%;
+    right: -15%;
+  }
+
+  .section__mockups {
+    height: 60rem;
+    min-height: 400px;
+    min-width: 500px;
+
+    left: 20%;
+    top: -15%;
+  }
+
+  
+
 }

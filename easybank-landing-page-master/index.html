@@ -40,38 +40,41 @@
         </nav>
       </section>
 
-      <button class="button" type="button">Request Invite</button>
+      <button class="header__button join__us__button" type="button">Request Invite</button>
     </header>
 
-    <section class="section__intro">
-      <picture>
-        <source
-          media="(min-width:700px)"
-          srcset="images/bg-intro-desktop.svg"
-        />
+    <div class="intro__container">
+      <section class="section__intro">
+        <picture>
+          <source
+            media="(min-width:700px)"
+            srcset="images/bg-intro-desktop.svg"
+          />
+          <img
+            class="section__background"
+            src="images/bg-intro-mobile.svg"
+            alt=""
+          />
+        </picture>
+
         <img
-          class="section__background"
-          src="images/bg-intro-mobile.svg"
-          alt=""
+          class="section__mockups"
+          src="images/image-mockups.png"
+          alt="Mockups"
         />
-      </picture>
+      </section>
 
-      <img
-        class="section__mockups"
-        src="images/image-mockups.png"
-        alt="Mockups"
-      />
-    </section>
+      <article class="join__us">
+        <h1 class="join__us__title title">Next generation digital banking</h1>
+        <span class="content">
+          Take your financial life online. Your Easybank account will be a
+          one-stop-shop for spending, saving, budgeting, investing, and much
+          more.
+        </span>
 
-    <article class="join__us">
-      <h1 class="join__us__title title">Next generation digital banking</h1>
-      <span class="content">
-        Take your financial life online. Your Easybank account will be a
-        one-stop-shop for spending, saving, budgeting, investing, and much more.
-      </span>
-
-      <button class="join__us__button">Request Invite</button>
-    </article>
+        <button class="join__us__button">Request Invite</button>
+      </article>
+    </div>
 
     <main>
       <section class="section__why__easybank">
@@ -87,7 +90,7 @@
         </article>
 
         <section>
-          <ol>
+          <ol class="because__easybank">
             <li>
               <article>
                 <img src="images/icon-online.svg" alt="Card" />
@@ -205,15 +208,46 @@
         </article>
       </section>
     </main>
-    <!-- About Us Contact Blog
-    Careers Support Privacy Policy Request Invite © Easybank. All Rights
-    Reserved -->
 
     <footer>
-      <img class="logo" src="/images/logo.svg" alt="Easybank" />
-      <section class="social__medias">
+      <span class="logo__container">
+        <img class="logo" src="/images/sub-logo.svg" alt="Easybank" />
+        easybank
+      </span>
+      <section>
         <nav>
-          <ul>
+          <ul class="social__medias">
+            <li>
+              <a href="#"
+                ><img src="images/icon-facebook.svg" alt="Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/icon-youtube.svg" alt="Youtube"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/icon-twitter.svg" alt="Twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/icon-pinterest.svg" alt="Pinterest"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/icon-instagram.svg" alt="Instagram"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section>
+        <nav>
+          <ul class="about__us">
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Blog</a></li>
@@ -223,6 +257,10 @@
           </ul>
         </nav>
       </section>
+      <button type="button" class="request__invite join__us__button">
+        Request Invite
+      </button>
+      <span class="copyright">© Easybank. All Eight Reserved</span>
     </footer>
   </body>
 </html>

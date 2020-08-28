@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Rubik;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-direction: column;
+  margin: 2.4rem;
+}
+
+#phone {
+  position: relative;
+  min-width: 260px;
+  max-width: 260px;
+  height: 600px;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: hsl(270, 20%, 96%);
+}
+
+#phone .border {
+  position: absolute;
+  width: 106%;
+  height: 103%;
+  border: 12px solid white;
+  border-radius: 10%;
+  box-shadow: 1px 1px 6px gray;
+  right: -0.6rem;
+  top: -0.6rem;
+}
+
+#phone .top {
+  position: absolute;
+  height: 22px;
+  width: 55%;
+  
+  border-radius: 0 0 12px 12px;
+  background-color: #fff;
+  top: 0;
+}
+
+#phone header {
+  width: 100%;
+  height: 76px;
+  border-radius: 2rem 2rem 0 0;
+  padding: 0 1.4rem;
+  padding-top: 32px;
+  background-image:  linear-gradient(90deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+}
+
+#phone .chat-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#phone .chat-back span {
+  font-size: 1.4rem;
+  padding: 0.2rem 0.6rem;
+}
+
+#phone .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+#phone .avatar {
+  height: 32px;
+  margin-right: 0.6rem;
+  border: 1px whitesmoke solid;
+  border-radius: 50%;
+}
+
+#phone .options .circle.one,
+#phone .options .circle.two,
+#phone .options .circle.three {
+  width: 4px;
+  height: 4px;
+  margin: 0.2rem 0;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+#phone .user-content span {
+  display: block;
+}
+
+#phone .user-content span:nth-child(2) {
+  font-size: 0.6rem;
+}
+
+#phone .messages {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+}
+
+#phone .messages article {
+  width: 100%;
+  display: flex;
+  margin-bottom: 6px;
+}
+
+#phone .messages article:not(.recipient) {
+  justify-content: flex-end;
+}
+
+#phone .messages span {
+  display: inline-block;
+  max-width: 70%;
+  padding: 8px;
+}
+
+#phone .messages .recipient span {
+  border-radius: 16px 16px 16px 2px;
+  color: hsl(276, 55%, 52%);
+  background-color: hsla(264, 100%, 61%, 0.2);
+}
+
+#phone .messages .sender span,
+#phone .sender.pictures-with-legend .pictures span {
+  border-radius: 16px 16px 5px 16px;
+  background-color: #fff;
+}
+
+#phone .sender.offer,
+#phone .recipient.offer {
+  max-width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.2rem;
+  border-radius: 10px 10px 10px 2px;
+  background-image:  linear-gradient(90deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+}
+
+#phone .sender.offer .confirm,
+#phone .recipient.offer .confirm {
+  width: 16px;
+  height: 16px;
+  border: 1px #fff solid;
+  border-radius: 50%;
+}
+
+#phone .sender.offer span,
+#phone .recipient.offer span {
+  font-size: 0.6rem;
+  color: white;
+}
+
+#phone .sender.offer span:nth-child(3),
+#phone .recipient.offer span:nth-child(3) {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#phone .sender.pictures-with-legend {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#phone .sender.pictures-with-legend .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  width: 70%;
+}
+
+#phone .sender.pictures-with-legend .pictures {
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  margin-bottom: 6px;
+}
+
+#phone .sender.pictures-with-legend .pictures img {
+  width: 90%;
+  margin: 0 6px;
+  border-radius: 10px;
+}
+
+#phone .sender.pictures-with-legend .pictures span {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #fff;
+}
+
+#phone .send-message {
+  position: absolute;
+  width: 85%;
+  height: 2.4rem;
+  font-size: 0.8rem;
+  color: #808080;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 0.4rem;
+  
+  border-radius: 20rem;
+  background-color: #fff;
+  bottom: 1rem;
+
+}
+
+#phone .send-message .send {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: hsl(271, 36%, 24%);
+}
+
+.description {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.description h1 {
+  font-size: 2rem;
+  color: hsl(271, 36%, 24%);
+  margin-bottom: 1rem;
+}
+
+.description p {
+  font-size: 1.4rem;
+  color: hsl(270, 7%, 64%);
+}
+
+.attribution {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 700px) {
+  main {
+    flex-direction: row;
+  }
+
+  .description {
+    margin-left: 6rem;
+    text-align: left;
+  }
+
+@media (min-height: 800px) {
+  body {
+    height: 100vh;
+  }
+}
+}
