@@ -13,26 +13,24 @@
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "join_us intro";
   justify-content: center;
-  align-items: center;
 }
 
 .section__intro {
+  margin-bottom: 0;
   background-image: url("images/bg-intro-desktop.svg");
-  background-size: 160%;
-  background-position: 0 50%;
+  background-position-y: 0%;
   overflow-x: hidden;
   grid-area: intro;
 }
 
-.section__mockups {
-  height: 100%;
 
-  left: 60%;
+.section__mockups {
+  left: 70%;
   top: -20%;
 }
 
 .latest__item__container {
-  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -42,10 +40,13 @@
 }
 
 @media (min-width: 750px) {
+  .section__intro {
+    height: 40vh;
+  }
+
   .because__easybank {
     grid-template-columns: repeat(2, 300px);
     justify-content: center;
-    grid-gap: 5rem;
   }
 
   footer {
@@ -96,17 +97,25 @@
       margin-top: 2rem;
     }
 
+    .intro__container {
+      grid-template-columns: 1fr 2fr;
+    }
+
     .section__intro {
       height: 80vh;
-      background-position: 0% 50%;
+      background-size: 120%;
     }
 
     .join__us {
       min-width: 320px;
-      margin: 0 3rem;
+      margin-left: 3rem;
       align-items: initial;
       text-align: left;
       grid-area: join_us;
+    }
+
+    .section__why__easybank {
+      padding: 0 4rem;
     }
 
     .why__easybank {
@@ -123,6 +132,7 @@
 
     .because__easybank {
       grid-template-columns: repeat(auto-fit, 250px);
+      justify-content: start;
     }
 
     .latest__articles {
@@ -137,6 +147,18 @@
 }
 
 @media (min-width: 800px) {
+  .section__intro {
+    background-position: -100% 80%;
+  }
+
+  .intro__container {
+    align-items: center;
+  }
+
+  .join__us {
+    margin-top: 0;
+  }
+
   .because__easybank article {
     margin-top: 0;
     padding: 0 1rem;
