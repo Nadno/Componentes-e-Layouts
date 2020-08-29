@@ -29,10 +29,21 @@ body {
 
 .content {
   display: block;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: var(--color-neutral-blue);
-  padding: 0 2.4rem;
   margin: 1.4rem 0;
+}
+
+.item__padding {
+  padding: 0 1.6rem;
+}
+
+.block__margin__top {
+  margin-top: 12rem;
+}
+
+.block__margin {
+  margin: 0 4rem;
 }
 
 .logo {
@@ -80,6 +91,10 @@ body {
   display: none;
 }
 
+.intro__container {
+  background-color: #fff;
+}
+
 .section__intro {
   position: relative;
 }
@@ -91,9 +106,9 @@ body {
 .section__mockups {
   position: absolute;
   height: 100%;
-
-  top: -120px;
-  left: 0;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .join__us {
@@ -123,15 +138,14 @@ body {
 
 .section__why__easybank {
   text-align: center;
-  margin-top: 12rem;
 }
 
 .section__why__easybank > article {
   margin-bottom: 4rem;
 }
 
-.section__why__easybank article {
-  margin-top: 3.4rem;  
+.because__easybank li {
+  margin-top: 3.4rem;
 }
 
 .section__why__easybank {
@@ -141,8 +155,7 @@ body {
 
 .because__easybank {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 350px));
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 100%);
   align-items: center;
 
   list-style: none;
@@ -150,10 +163,12 @@ body {
 
 .why__easybank__title {
   font-size: 3.4rem;
+  width: 60vw;
+  margin: 0 auto;
 }
 
 .why__easybank__subtitle {
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 1.8rem 0;
 }
 
@@ -162,7 +177,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 12rem;
 }
 
 .latest__articles .latest__item {
@@ -271,17 +285,12 @@ footer {
   }
 }
 
-@media (min-width: 800px) {
-  .header__button {
-    display: initial;
-    width: 12rem;
-    height: 4rem;
-    font-size: 1.4rem;
-    margin: 0 2.6rem;
-  }
-}
 
 @media (min-width: 750px) {
+  .block__margin__top {
+    margin-top: 2rem;
+  }
+
   .intro__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -294,10 +303,6 @@ footer {
     width: 100%;
     grid-area: intro;
   }
-
-  .join__us .content {
-    padding: 0;
-  }
   
   .join__us {
     min-width: 320px;
@@ -305,7 +310,6 @@ footer {
     align-items: initial;
     text-align: left;
     grid-area: join_us;
-    padding: 0 2.4rem;
   }
 
   .section__background {
@@ -320,14 +324,46 @@ footer {
   }
 
   .section__mockups {
+    position: absolute;
     height: 60rem;
     min-height: 400px;
     min-width: 500px;
 
-    left: 20%;
+    left: 70%;
     top: -15%;
+    transform: 0;
   }
 
-  
+  .why__easybank {
+    text-align: left;
+  }
 
+  .why__easybank__title {
+    margin: 0;
+  }
+
+  .why__easybank .content {
+    max-width: 550px;
+  }
+
+  .because__easybank {
+    grid-template-columns: repeat(auto-fit, 250px);
+  }
+
+}
+
+@media (min-width: 800px) {
+  .header__button {
+    display: initial;
+    width: 12rem;
+    height: 4rem;
+    font-size: 1.4rem;
+    margin: 0 2.6rem;
+  }
+
+  .because__easybank article {
+    margin-top: 0;
+    padding: 0 1rem;
+    text-align: left;
+  }
 }
