@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -16,12 +15,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="desktop.css" media="(max-height: 700px)">
-    
-
+    <link rel="stylesheet" href="desktop.css" media="(min-width: 600px)" />
     <title>Easybank</title>
   </head>
   <body>
+    <!-- Criar uma media para dispositivos largos com excessão do ipad -->
+
     <header class="header">
       <img class="logo" src="images/logo.svg" alt="Easybank" />
       <section class="header__menu">
@@ -42,22 +41,24 @@
         </nav>
       </section>
 
-      <button class="header__button join__us__button" type="button">Request Invite</button>
+      <button class="header__button join__us__button" type="button">
+        Request Invite
+      </button>
     </header>
 
     <div class="intro__container">
       <section class="section__intro">
-        <picture>
+        <!-- <picture>
           <source
-            media="(min-width:700px)"
+            media="(min-width:750px)"
             srcset="images/bg-intro-desktop.svg"
           />
           <img
             class="section__background"
-            src="images/bg-intro-mobile.svg"
+            src=""
             alt=""
           />
-        </picture>
+        </picture> -->
 
         <img
           class="section__mockups"
@@ -81,9 +82,7 @@
     <main>
       <section class="section__why__easybank block__margin__top">
         <article class="why__easybank item__padding block__margin">
-          <h2 class="why__easybank__title title">
-            Why choose Easybank?
-          </h2>
+          <h2 class="why__easybank__title title">Why choose Easybank?</h2>
           <span class="content">
             We leverage Open Banking to turn your bank account into your
             financial hub. Control your finances like never before.
@@ -142,71 +141,73 @@
       <section class="latest__articles block__margin__top">
         <h1 class="latest__title title">Latest Articles</h1>
 
-        <article class="latest__item">
-          <img
-            class="item__image"
-            src="images/image-currency.jpg"
-            alt="currency"
-          />
-          <div class="item__content">
-            <blockquote>
-              <cite class="item__cite">By Claire Robinson</cite>
-            </blockquote>
-            <h4 class="item__title title">
-              Receive money in any currency with no fees
-            </h4>
-            <span class="content__description content">
-              The world is getting smaller and we’re becoming more mobile. So
-              why should you be forced to only receive money in a single …
-            </span>
-          </div>
-        </article>
-        <article class="latest__item">
-          <img class="item__image" src="images/image-restaurant.jpg" alt="" />
-          <div class="item__content">
-            <blockquote>
-              <cite class="item__cite">By Wilson Hutton</cite>
-            </blockquote>
-            <h4 class="item__title title">
-              Treat yourself without worrying about money
-            </h4>
-            <span class="content__description content">
-              Our simple budgeting feature allows you to separate out your
-              spending and set realistic limits each month. That means you …
-            </span>
-          </div>
-        </article>
-        <article class="latest__item">
-          <img class="item__image" src="images/image-plane.jpg" alt="" />
-          <div class="item__content">
-            <blockquote>
-              <cite class="item__cite">By Wilson Hutton</cite>
-            </blockquote>
-            <h4 class="item__title title">
-              Take Easybank card wherever you go
-            </h4>
-            <span class="content__description content">
-              We want you to enjoy your travels. This is why we don’t charge any
-              fees on purchases while you’re abroad. We’ll even show you …
-            </span>
-          </div>
-        </article>
-        <article class="latest__item">
-          <img class="item__image" src="images/image-confetti.jpg" alt="" />
-          <div class="item__content">
-            <blockquote>
-              <cite class="item__cite">By Claire Robinson</cite>
-            </blockquote>
-            <h4 class="item__title title">
-              Our invite-only Beta accounts are now live!
-            </h4>
-            <span class="content__description content">
-              After a lot of hard work by the whole team, we’re excited to
-              launch our closed beta. It’s easy to request an invite through the
-              site ...
-            </span>
-          </div>
-        </article>
+        <div class="latest__item__container">
+          <article class="latest__item">
+            <img
+              class="item__image"
+              src="images/image-currency.jpg"
+              alt="currency"
+            />
+            <div class="item__content">
+              <blockquote>
+                <cite class="item__cite">By Claire Robinson</cite>
+              </blockquote>
+              <h4 class="item__title title">
+                Receive money in any currency with no fees
+              </h4>
+              <span class="content__description content">
+                The world is getting smaller and we’re becoming more mobile. So
+                why should you be forced to only receive money in a single …
+              </span>
+            </div>
+          </article>
+          <article class="latest__item">
+            <img class="item__image" src="images/image-restaurant.jpg" alt="" />
+            <div class="item__content">
+              <blockquote>
+                <cite class="item__cite">By Wilson Hutton</cite>
+              </blockquote>
+              <h4 class="item__title title">
+                Treat yourself without worrying about money
+              </h4>
+              <span class="content__description content">
+                Our simple budgeting feature allows you to separate out your
+                spending and set realistic limits each month. That means you …
+              </span>
+            </div>
+          </article>
+          <article class="latest__item">
+            <img class="item__image" src="images/image-plane.jpg" alt="" />
+            <div class="item__content">
+              <blockquote>
+                <cite class="item__cite">By Wilson Hutton</cite>
+              </blockquote>
+              <h4 class="item__title title">
+                Take Easybank card wherever you go
+              </h4>
+              <span class="content__description content">
+                We want you to enjoy your travels. This is why we don’t charge
+                any fees on purchases while you’re abroad. We’ll even show you …
+              </span>
+            </div>
+          </article>
+          <article class="latest__item">
+            <img class="item__image" src="images/image-confetti.jpg" alt="" />
+            <div class="item__content">
+              <blockquote>
+                <cite class="item__cite">By Claire Robinson</cite>
+              </blockquote>
+              <h4 class="item__title title">
+                Our invite-only Beta accounts are now live!
+              </h4>
+              <span class="content__description content">
+                After a lot of hard work by the whole team, we’re excited to
+                launch our closed beta. It’s easy to request an invite through
+                the site ...
+              </span>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 

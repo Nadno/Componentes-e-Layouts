@@ -97,15 +97,17 @@ body {
 
 .section__intro {
   position: relative;
-}
+  height: 60vh;
 
-.section__background {
-  width: 100vw;
+  background-image: url("images/bg-intro-desktop.svg");
+  background-size: 160%;
+  background-position: 40% 155%;
+  background-repeat: no-repeat;
 }
 
 .section__mockups {
   position: absolute;
-  height: 100%;
+  max-width: 95%;
   top: -25%;
   left: 50%;
   transform: translateX(-50%);
