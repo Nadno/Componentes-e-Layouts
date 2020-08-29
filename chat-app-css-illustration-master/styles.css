@@ -149,7 +149,7 @@ main {
   justify-content: space-between;
   align-items: center;
 
-  padding: 0.2rem;
+  padding: 0.2rem 0.4rem;
   border-radius: 10px 10px 10px 2px;
   background-image:  linear-gradient(90deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
 }
