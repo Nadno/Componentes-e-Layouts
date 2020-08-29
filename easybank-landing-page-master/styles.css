@@ -97,17 +97,19 @@ body {
 
 .section__intro {
   position: relative;
-  height: 60vh;
+  height: 55vh;
 
-  background-image: url("images/bg-intro-desktop.svg");
-  background-size: 160%;
-  background-position: 40% 155%;
+  background-image: url("images/bg-intro-mobile.svg");
+  background-size: 100%;
+  background-position: 0 0;
   background-repeat: no-repeat;
+  margin-bottom: 6rem;
 }
 
 .section__mockups {
   position: absolute;
   max-width: 95%;
+  max-height: 100%;
   top: -25%;
   left: 50%;
   transform: translateX(-50%);
@@ -266,6 +268,10 @@ footer {
 .request__invite {
   margin: 1rem 0;
   list-style: none;
+}
+
+.request__invite {
+  width: 100%;
 }
 
 .copyright {
