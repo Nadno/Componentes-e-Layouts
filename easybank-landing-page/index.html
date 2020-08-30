@@ -37,6 +37,8 @@
             <li><a href="#">Careers</a></li>
           </ul>
         </nav>
+
+        <div class="background"></div>
       </section>
 
       <button class="header__button join__us__button" type="button">
@@ -258,13 +260,8 @@
 
     <script>
       const toggleBt = document.querySelector("div.header__toggle");
-      let toggleIsActive = false;
-
       toggleBt.onclick = () => {
         toggleBt.classList.toggle("on");
-
-        toggleIsActive = !toggleIsActive;
-        document.body.style.overflow = toggleIsActive ? 'hidden' : 'initial';
       };
     </script>
   </body>
