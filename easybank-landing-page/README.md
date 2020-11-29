@@ -1,5 +1,5 @@
 <h1 align="center">Easybank</h1>
-<p align="center">Um desafio do site Frontend Mentor. Uma landing page. Layout desenvolvido com o foco no aprendizado em <strong>mobile first</strong> e na <strong>arquitetura BEM</strong> do CSS.</p>
+<p align="center">Um desafio do site Frontend Mentor. Uma landing page. Layout desenvolvido com o foco no aprendizado em <strong>mobile first</strong> e na <strong>metodologia BEM</strong> do CSS.</p>
 <hr/>
 <h1 align="center"><img src="desktop.png" /></h1>
 
