@@ -64,4 +64,74 @@ body {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+
+.box__two {
+  background-color: #f6f1d1;
+}
+
+.box__two button {
+  position: relative;
+  width: 5rem;
+  height: 2.4rem;
+  border: none;
+  border-radius: 0.6rem;
+  display: block;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  font-weight: bolder;
+  color: #6ea38d;
+  border: 1px solid #6aa389;
+  background-color: #cfffea;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0, 0, 1, 1);
+  transition: -webkit-transform 0.2s cubic-bezier(0, 0, 1, 1);
+  transition: transform 0.2s cubic-bezier(0, 0, 1, 1);
+  transition: transform 0.2s cubic-bezier(0, 0, 1, 1), -webkit-transform 0.2s cubic-bezier(0, 0, 1, 1);
+}
+
+.box__two button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 99%;
+  display: block;
+  border-radius: inherit;
+  border: 1px solid rgba(106, 163, 137, 0.315);
+  -webkit-box-shadow: 0 8px 1px #6ba389;
+          box-shadow: 0 8px 1px #6ba389;
+  background-color: #98e7c4;
+  -webkit-transform: translate3d(-1px, -0.2rem, -1rem);
+          transform: translate3d(-1px, -0.2rem, -1rem);
+  -webkit-transition-property: -webkit-transform, -webkit-box-shadow;
+  transition-property: -webkit-transform, -webkit-box-shadow;
+  transition-property: transform, box-shadow;
+  transition-property: transform, box-shadow, -webkit-transform, -webkit-box-shadow;
+  -webkit-transition-duration: 0.1s, 0.2s;
+          transition-duration: 0.1s, 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 1, 1);
+          transition-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+
+.box__two button:hover {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+.box__two button:focus {
+  outline: none;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+.box__two button:active {
+  -webkit-transform: translateY(12px);
+          transform: translateY(12px);
+}
+
+.box__two button:active::before {
+  -webkit-box-shadow: 0 2px 1px #6ba389;
+          box-shadow: 0 2px 1px #6ba389;
+  -webkit-transform: translate3d(-1px, -0.7rem, -1rem);
+          transform: translate3d(-1px, -0.7rem, -1rem);
+}
 /*# sourceMappingURL=main.css.map */
