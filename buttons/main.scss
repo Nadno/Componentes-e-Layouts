@@ -144,13 +144,39 @@ body {
     overflow: hidden;
     border-radius: 1.8rem;
 
-    &:hover h2 {
+    &:hover h2,
+    &:focus h2,
+    &:focus-within h2 {
       transform: translateX(-100%);
     }
 
-    &:hover a {
+    &:hover a,
+    &:focus a,
+    &:focus-within a {
       opacity: 1;
       transform: translateX(0);
+    }
+
+    @keyframes social-media-button {
+      25% {
+        transform: scale(1.4);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+
+      75% {
+        transform: scale(1.4);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    a:focus {
+      animation: social-media-button 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035) backwards;
     }
   }
 

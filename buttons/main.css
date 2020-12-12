@@ -167,15 +167,62 @@ body {
   border-radius: 1.8rem;
 }
 
-.box__three article:hover h2 {
+.box__three article:hover h2,
+.box__three article:focus h2,
+.box__three article:focus-within h2 {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
 }
 
-.box__three article:hover a {
+.box__three article:hover a,
+.box__three article:focus a,
+.box__three article:focus-within a {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+@-webkit-keyframes social-media-button {
+  25% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes social-media-button {
+  25% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.box__three article a:focus {
+  -webkit-animation: social-media-button 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035) backwards;
+          animation: social-media-button 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035) backwards;
 }
 
 .box__three h2 {
