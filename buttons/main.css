@@ -142,20 +142,44 @@ body {
   place-content: center;
 }
 
-.box__three button {
-  height: 3.4rem;
-  width: 12rem;
-  border: none;
-  overflow: hidden;
+.box__three .svg-icon,
+.box__three a {
+  width: 2rem;
+  height: 2rem;
 }
 
-.box__three button article {
-  width: 100%;
-  height: 100%;
+.box__three .svg-icon path,
+.box__three .svg-icon polygon,
+.box__three .svg-icon rect {
+  fill: #2e353b;
+}
+
+.box__three .svg-icon circle {
+  stroke: #2e353b;
+  stroke-width: 1;
+}
+
+.box__three article {
+  position: relative;
+  height: 3.4rem;
+  width: 12rem;
+  overflow: hidden;
   border-radius: 1.8rem;
 }
 
-.box__three button h2 {
+.box__three article:hover h2 {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.box__three article:hover a {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.box__three h2 {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,12 +196,72 @@ body {
   color: #f5f5f5;
   border-radius: inherit;
   background-color: #2f3438;
+  z-index: 10;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
 }
 
-.box__three button .content {
+.box__three .content {
+  position: absolute;
   height: 100%;
   width: inherit;
   border-radius: inherit;
-  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #e1e6eb;
+  z-index: 0;
+}
+
+.box__three .content a {
+  -webkit-transform: translateX(-400%);
+          transform: translateX(-400%);
+  opacity: 0;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.box__three .content > :nth-child(1) {
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-duration: 1.2s;
+          transition-duration: 1.2s;
+}
+
+.box__three .content > :nth-child(2) {
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.box__three .content > :nth-child(3) {
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.box__three .content > :nth-child(4) {
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
 }
 /*# sourceMappingURL=main.css.map */

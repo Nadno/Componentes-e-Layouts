@@ -55,7 +55,6 @@ body {
   }
 }
 
-
 .box__two {
   background-color: #f6f1d1;
 
@@ -121,37 +120,96 @@ body {
   display: grid;
   place-content: center;
 
-  button {
+  .svg-icon,
+  a {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+    fill: #2e353b;
+  }
+  
+  .svg-icon circle {
+    stroke: #2e353b;
+    stroke-width: 1;
+  }
+
+  article {
+    position: relative;
     height: 3.4rem;
     width: 12rem;
-    border: none;
     overflow: hidden;
+    border-radius: 1.8rem;
 
-    article {
-      width: 100%;
-      height: 100%;
-      border-radius: 1.8rem;
+    &:hover h2 {
+      transform: translateX(-100%);
     }
 
-    h2 {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: inherit;
-      height: 100%;
-      font-size: 0.8rem;
-      font-weight: 400;
-      color: #f5f5f5;
-
-      border-radius: inherit;
-      background-color: #2f3438;
+    &:hover a {
+      opacity: 1;
+      transform: translateX(0);
     }
-    
-    .content {
-      height: 100%;
-      width: inherit;
-      border-radius: inherit;
-      float: left;
+  }
+
+  h2 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    height: 100%;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #f5f5f5;
+
+    border-radius: inherit;
+    background-color: #2f3438;
+    z-index: 10;
+
+    transition: transform 1s ease;
+  }
+
+  .content {
+    position: absolute;
+    height: 100%;
+    width: inherit;
+    border-radius: inherit;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: #e1e6eb;
+
+    z-index: 0;
+
+    a {
+      transform: translateX(-400%);
+      opacity: 0;
+      transition-timing-function: ease-in-out;
+    }
+
+    & > :nth-child(1) {
+      transition-property: transform, opacity;
+      transition-duration: 1.2s;
+    }
+
+    & > :nth-child(2) {
+      transition-property: transform, opacity;
+      transition-duration: 1s;
+    }
+
+    & > :nth-child(3) {
+      transition-property: transform, opacity;
+      transition-duration: 0.8s;
+    }
+
+    & > :nth-child(4) {
+      transition-property: transform, opacity;
+      transition-duration: 0.6s;
     }
   }
 }
