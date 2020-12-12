@@ -88,7 +88,7 @@ body {
       border-radius: inherit;
       border: 1px solid rgba(106, 163, 137, 0.315);
 
-      box-shadow: 0 100% 1px #6ba389;
+      box-shadow: 0px 10px 1px #6ba389;
       background-color: rgb(152, 231, 196);
 
       transform: translate3d(-1px, -0.2rem, -1rem);
@@ -312,11 +312,14 @@ body {
       clip-path: polygon(0 0, 100% 0%, 80% 100%, 0 100%);
     }
 
-    &:hover::before {
+    &:hover::before,
+    &:focus::before {
       transform: translate(-40%, -50%);
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
+      outline: none;
       color: #f5f5f5;
       border-color: #ff4655;
     }
