@@ -67,6 +67,7 @@ body {
 }
 
 .box__two {
+  height: 5rem;
   background-color: #f6f1d1;
 }
 
@@ -348,24 +349,7 @@ body {
   z-index: -1;
 }
 
-.box__four > :nth-child(1) button {
-  color: #ff4655;
-  background-color: transparent;
-}
-
-.box__four > :nth-child(2) button {
-  color: #0f1923;
-  background-color: #f5f5f5;
-  border-color: #f5f5f5;
-}
-
-.box__four > :nth-child(3) button {
-  color: #f5f5f5;
-  border-color: #f5f5f5;
-  background-color: transparent;
-}
-
-.box__four button {
+.box__four .btn {
   cursor: pointer;
   position: relative;
   width: 100%;
@@ -378,7 +362,24 @@ body {
   overflow: hidden;
 }
 
-.box__four button::before {
+.box__four .btn--primary {
+  color: #ff4655;
+  background-color: transparent;
+}
+
+.box__four .btn--secondary {
+  color: #0f1923;
+  background-color: #f5f5f5;
+  border-color: #f5f5f5;
+}
+
+.box__four .btn--tertiary {
+  color: #f5f5f5;
+  border-color: #f5f5f5;
+  background-color: transparent;
+}
+
+.box__four .btn::before {
   content: "";
   position: absolute;
   width: 130%;
@@ -397,14 +398,19 @@ body {
           clip-path: polygon(0 0, 100% 0%, 80% 100%, 0 100%);
 }
 
-.box__four button:hover::before, .box__four button:focus::before {
+.box__four .btn:hover::before, .box__four .btn:focus::before {
   -webkit-transform: translate(-40%, -50%);
           transform: translate(-40%, -50%);
 }
 
-.box__four button:hover, .box__four button:focus {
+.box__four .btn:hover, .box__four .btn:focus {
   outline: none;
   color: #f5f5f5;
   border-color: #ff4655;
+}
+
+.box__four .btn:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 /*# sourceMappingURL=main.css.map */
