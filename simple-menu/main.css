@@ -14,7 +14,7 @@ body {
 }
 
 .menu {
-  width: 200px;
+  width: 300px;
   height: 100%;
   list-style: none;
 }
@@ -45,15 +45,16 @@ body {
 }
 
 .menu__item a:hover,
-.menu__item a:focus-within {
+.menu__item a:focus {
   border-left: 0.3rem solid tomato;
   color: tomato;
+  outline: none;
 }
 
 .menu__item a:hover + .menu--sub,
 .menu__item a:focus + .menu--sub,
-.menu__item .menu--sub:focus-within,
-.menu__item .menu--sub:hover {
+.menu__item .menu--sub:hover,
+.menu__item .menu--sub:focus-within {
   visibility: visible;
 }
 
@@ -65,8 +66,8 @@ body {
   left: 110%;
   top: 50%;
   visibility: hidden;
-  -webkit-transition: visibility 175ms;
-  transition: visibility 175ms;
+  -webkit-transition: visibility 50ms 0.3s;
+  transition: visibility 50ms 0.3s;
 }
 
 .menu--sub::after {
