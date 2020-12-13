@@ -145,7 +145,7 @@ body {
 }
 
 .box__three .svg-icon,
-.box__three a {
+.box__three .share-me__item {
   width: 2rem;
   height: 2rem;
 }
@@ -161,7 +161,7 @@ body {
   stroke-width: 1;
 }
 
-.box__three article {
+.box__three .share-me {
   position: relative;
   height: 3.4rem;
   width: 12rem;
@@ -169,16 +169,91 @@ body {
   border-radius: 1.8rem;
 }
 
-.box__three article:hover h2,
-.box__three article:focus h2,
-.box__three article:focus-within h2 {
+.box__three .share-me__title {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: inherit;
+  height: 100%;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #f5f5f5;
+  border-radius: inherit;
+  background-color: #2f3438;
+  z-index: 10;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.box__three .share-me__content {
+  position: absolute;
+  height: 100%;
+  width: inherit;
+  border-radius: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #e1e6eb;
+  z-index: 0;
+}
+
+.box__three .share-me__content > :nth-child(1) {
+  -webkit-transition-duration: 1.2s;
+          transition-duration: 1.2s;
+}
+
+.box__three .share-me__content > :nth-child(2) {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.box__three .share-me__content > :nth-child(3) {
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.box__three .share-me__content > :nth-child(4) {
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+}
+
+.box__three .share-me__item {
+  opacity: 0;
+  -webkit-transform: translateX(-400%);
+          transform: translateX(-400%);
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.box__three .share-me:hover > .share-me__title,
+.box__three .share-me:focus .share-me__title,
+.box__three .share-me:focus-within .share-me__title {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
 }
 
-.box__three article:hover a,
-.box__three article:focus a,
-.box__three article:focus-within a {
+.box__three .share-me:hover .share-me__item,
+.box__three .share-me:focus .share-me__item,
+.box__three .share-me:focus-within .share-me__item {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -222,96 +297,9 @@ body {
   }
 }
 
-.box__three article a:focus {
+.box__three .share-me__item:focus {
   -webkit-animation: social-media-button 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035) backwards;
           animation: social-media-button 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035) backwards;
-}
-
-.box__three h2 {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: inherit;
-  height: 100%;
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: #f5f5f5;
-  border-radius: inherit;
-  background-color: #2f3438;
-  z-index: 10;
-  -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
-}
-
-.box__three .content {
-  position: absolute;
-  height: 100%;
-  width: inherit;
-  border-radius: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  background-color: #e1e6eb;
-  z-index: 0;
-}
-
-.box__three .content a {
-  -webkit-transform: translateX(-400%);
-          transform: translateX(-400%);
-  opacity: 0;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-}
-
-.box__three .content > :nth-child(1) {
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform;
-  -webkit-transition-duration: 1.2s;
-          transition-duration: 1.2s;
-}
-
-.box__three .content > :nth-child(2) {
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-}
-
-.box__three .content > :nth-child(3) {
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform;
-  -webkit-transition-duration: 0.8s;
-          transition-duration: 0.8s;
-}
-
-.box__three .content > :nth-child(4) {
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform;
-  -webkit-transition-duration: 0.6s;
-          transition-duration: 0.6s;
 }
 
 .box__four {
@@ -326,7 +314,7 @@ body {
   background-color: #0f1923;
 }
 
-.box__four .button__field {
+.box__four .button-block {
   position: relative;
   width: 256px;
   height: 70px;
@@ -336,7 +324,7 @@ body {
           transform-style: preserve-3d;
 }
 
-.box__four .button__field::before {
+.box__four .button-block::before {
   content: "";
   position: absolute;
   width: 105%;

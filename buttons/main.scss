@@ -123,7 +123,7 @@ body {
   place-content: center;
 
   .svg-icon,
-  a {
+  .share-me__item {
     width: 2rem;
     height: 2rem;
   }
@@ -139,22 +139,78 @@ body {
     stroke-width: 1;
   }
 
-  article {
+  .share-me {
     position: relative;
     height: 3.4rem;
     width: 12rem;
     overflow: hidden;
     border-radius: 1.8rem;
 
-    &:hover h2,
-    &:focus h2,
-    &:focus-within h2 {
+    &__title {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: inherit;
+      height: 100%;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: #f5f5f5;
+  
+      border-radius: inherit;
+      background-color: #2f3438;
+      z-index: 10;
+  
+      transition: transform 1s ease;
+    }
+
+    &__content {
+      position: absolute;
+      height: 100%;
+      width: inherit;
+      border-radius: inherit;
+  
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+  
+      background-color: #e1e6eb;
+  
+      z-index: 0;
+  
+      & > :nth-child(1) {
+        transition-duration: 1.2s;
+      }
+  
+      & > :nth-child(2) {
+        transition-duration: 1s;
+      }
+  
+      & > :nth-child(3) {
+        transition-duration: 0.8s;
+      }
+  
+      & > :nth-child(4) {
+        transition-duration: 0.6s;
+      }
+    }
+
+    &__item {
+      opacity: 0;
+      transform: translateX(-400%);
+      transition-property: transform, opacity;
+      transition-timing-function: ease-in-out;
+    }
+
+    &:hover > .share-me__title,
+    &:focus .share-me__title,
+    &:focus-within .share-me__title {
       transform: translateX(-100%);
     }
 
-    &:hover a,
-    &:focus a,
-    &:focus-within a {
+    &:hover .share-me__item,
+    &:focus .share-me__item,
+    &:focus-within .share-me__item {
       opacity: 1;
       transform: translateX(0);
     }
@@ -177,67 +233,8 @@ body {
       }
     }
 
-    a:focus {
+    &__item:focus {
       animation: social-media-button 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035) backwards;
-    }
-  }
-
-  h2 {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: inherit;
-    height: 100%;
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: #f5f5f5;
-
-    border-radius: inherit;
-    background-color: #2f3438;
-    z-index: 10;
-
-    transition: transform 1s ease;
-  }
-
-  .content {
-    position: absolute;
-    height: 100%;
-    width: inherit;
-    border-radius: inherit;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-    background-color: #e1e6eb;
-
-    z-index: 0;
-
-    a {
-      transform: translateX(-400%);
-      opacity: 0;
-      transition-timing-function: ease-in-out;
-    }
-
-    & > :nth-child(1) {
-      transition-property: transform, opacity;
-      transition-duration: 1.2s;
-    }
-
-    & > :nth-child(2) {
-      transition-property: transform, opacity;
-      transition-duration: 1s;
-    }
-
-    & > :nth-child(3) {
-      transition-property: transform, opacity;
-      transition-duration: 0.8s;
-    }
-
-    & > :nth-child(4) {
-      transition-property: transform, opacity;
-      transition-duration: 0.6s;
     }
   }
 }
@@ -248,7 +245,7 @@ body {
   justify-content: space-evenly;
   background-color: #0f1923;
 
-  .button__field {
+  .button-block {
     position: relative;
     width: 256px;
     height: 70px;
