@@ -9,7 +9,7 @@ body {
   height: 100%;
   min-height: 100vh;
   width: 100vw;
-  background-color: #363636;
+  background-color: goldenrod;
   display: -ms-grid;
   display: grid;
   place-content: center;
@@ -28,6 +28,8 @@ body {
   overflow: hidden;
   border-radius: 5rem;
   background-color: #fff;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .menu .button__place {
@@ -37,7 +39,7 @@ body {
 
 .menu__button {
   width: 5rem;
-  height: 5rem;
+  height: inherit;
   border-radius: 50%;
   border: none;
   display: -webkit-box;
@@ -57,12 +59,23 @@ body {
   cursor: pointer;
 }
 
-.menu__button .bar__one,
-.menu__button .bar__two {
-  width: 1rem;
+.menu__button span {
+  width: 1.6rem;
   min-height: 0.2rem;
   background-color: grey;
   margin-bottom: 0.2rem;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+
+.menu__button:focus {
+  outline: none;
+}
+
+.menu__button:focus span {
+  background-color: goldenrod;
 }
 
 .menu__links {
@@ -77,8 +90,8 @@ body {
           justify-content: space-between;
   list-style: none;
   overflow: hidden;
-  -webkit-transition: width 0.5s linear;
-  transition: width 0.5s linear;
+  -webkit-transition: width, margin, 0.5s linear;
+  transition: width, margin, 0.5s linear;
 }
 
 .menu__link {
@@ -95,9 +108,62 @@ body {
   height: 100%;
   text-decoration: none;
   margin-right: 1rem;
+  color: #363636;
+  font-weight: bold;
 }
 
-.menu:focus-within .menu__links {
+.menu__link:focus {
+  color: goldenrod;
+  outline: none;
+}
+
+.menu.on .menu__links {
   width: 80vw;
+  margin: 0 1rem;
+}
+
+.menu.on .menu__button span {
+  background-color: tomato;
+}
+
+.menu.on .menu__button span:first-child {
+  -webkit-transform: rotate(-45deg) translate(-4px, 5px);
+          transform: rotate(-45deg) translate(-4px, 5px);
+}
+
+.menu.on .menu__button span:last-child {
+  -webkit-transform: rotate(45deg) translate(0, -1px);
+          transform: rotate(45deg) translate(0, -1px);
+}
+
+@media (max-width: 700px) {
+  .menu {
+    position: fixed;
+    width: 5rem;
+    left: 50%;
+    -webkit-transform: translate(-50%, 10%);
+            transform: translate(-50%, 10%);
+    -webkit-transition: height, width, 0.5s linear;
+    transition: height, width, 0.5s linear;
+  }
+  .menu__links {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+  }
+  .menu__link {
+    height: 2rem;
+  }
+  .menu.on {
+    width: 16rem;
+    height: 30vh;
+  }
+  .menu.on .menu__links {
+    width: 90%;
+    height: inherit;
+  }
 }
 /*# sourceMappingURL=main.css.map */

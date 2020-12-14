@@ -8,7 +8,7 @@ body {
   height: 100%;
   min-height: 100vh;
   width: 100vw;
-  background-color: #363636;
+  background-color: goldenrod;
 
   display: grid;
   place-content: center;
@@ -24,9 +24,10 @@ body {
   align-items: center;
 
   overflow: hidden;
+  
   border-radius: 5rem;
   background-color: #fff;
-
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 
   .button__place {
     width: 3rem;
@@ -35,7 +36,7 @@ body {
 
   &__button {
     width: 5rem;
-    height: 5rem;
+    height: inherit;
     border-radius: 50%;
     border: none;
     display: flex;
@@ -43,15 +44,23 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #fff;
+    
 
     cursor: pointer;
 
-    .bar__one,
-    .bar__two {
-      width: 1rem;
+    span {
+      width: 1.6rem;
       min-height: 0.2rem;
       background-color: grey;
       margin-bottom: 0.2rem;
+      transition: transform 0.5s linear;
+    }
+
+    &:focus {
+      outline: none;
+      span {
+        background-color: goldenrod;
+      }
     }
   }
 
@@ -65,7 +74,7 @@ body {
     list-style: none;
     overflow: hidden;
 
-    transition: width 0.5s linear;
+    transition: width, margin, 0.5s linear;
   }
 
   &__link {
@@ -76,9 +85,64 @@ body {
     height: 100%;
     text-decoration: none;
     margin-right: 1rem;
+    color: #363636;
+    font-weight: bold;
+
+    &:focus {
+      color: goldenrod;
+      outline: none;
+    }
   }
 
-  &:focus-within .menu__links {
+  &.on .menu__links {
     width: 80vw;
+    margin: 0 1rem
   }
+
+  &.on .menu__button {
+    span {
+      background-color: tomato;
+    }
+
+    span:first-child {
+      transform: rotate(-45deg) translate(-4px, 5px);
+    }
+
+    span:last-child {
+      transform: rotate(45deg) translate(0, -1px);
+    }
+  }
+}
+
+
+@media (max-width: 700px) {
+  .menu {
+    position: fixed;
+    width: 5rem;
+
+    left: 50%;
+    transform: translate(-50%, 10%);
+    transition: height, width, 0.5s linear;
+
+    &__links {
+      display: grid;
+      grid-template-columns: 1fr;
+      transition-duration: 0.25s;
+    }
+
+    &__link {
+      height: 2rem;
+    }
+
+    &.on {
+      width: 16rem;
+      height: 30vh;
+    }
+
+    &.on .menu__links {
+      width: 90%;
+      height: inherit;
+    }
+  }
+
 }

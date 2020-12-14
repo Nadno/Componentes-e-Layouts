@@ -11,8 +11,8 @@
 <body>
   <header class="menu">
     <button class="menu__button" type="button">
-      <span class="bar__one"></span>
-      <span class="bar__two"></span>
+      <span></span>
+      <span></span>
     </button>
 
     <nav>
@@ -26,4 +26,14 @@
     </nav>
   </header>
 </body>
+
+<script>
+  document
+    .querySelector(".menu__button")
+    .addEventListener("click", ({ target }) => {
+      document
+        .querySelector(".menu")
+        .classList.toggle("on");
+    });
+</script>
 </html>
