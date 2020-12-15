@@ -32,6 +32,14 @@ main {
   padding: 4rem 2.4rem;
 }
 
+.testimonial__comment p::before {
+  content: '\201C';
+}
+
+.testimonial__comment p::after {
+  content: '\201D';
+}
+
 .testimonial {
   padding: 3rem;
   border-radius: 0.8rem;
@@ -45,7 +53,7 @@ main {
   background-position: 80% 0;
 }
 
-.testimonial__user,
+.testimonial__user a,
 .testimonial__tittle,
 .testimonial__comment {
   margin-bottom: 1.4rem;
@@ -56,9 +64,10 @@ main {
   color: var(--color-light-gray);
 }
 
-.testimonial__user {
+.testimonial__user a {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .user__photo {
@@ -102,7 +111,7 @@ main {
   background-color: #fff;
 }
 
-.testimonial--white .testimonial__user,
+.testimonial--white .testimonial__user a,
 .testimonial--white .testimonial__tittle {
   color: #4A4F5C;
 }
