@@ -7,13 +7,19 @@
     <title>Menu HTML</title>
   </head>
   <body>
-    <header class="box">
+    <header class="box on">
+      <button class="box__toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <ul class="menu">
         <li class="menu__item">
           <a href="#">Home</a>
         </li>
         <li class="menu__item">
-          <a href="#">Products</a>
+          Products
           <ul class="menu menu--sub">
             <li class="menu__item">
               <a href="#">Smartphones</a>
@@ -28,7 +34,7 @@
           </ul>
         </li>
         <li class="menu__item">
-          <a href="#">About</a>
+          About
           <ul class="menu menu--sub">
             <li class="menu__item"><a href="#">Who are we?</a></li>
             <li class="menu__item"><a href="#">What we do?</a></li>
@@ -41,5 +47,15 @@
         </li>
       </ul>
     </header>
+
+    <script>
+      document
+        .querySelector(".box__toggle")
+        .addEventListener("click", ({ target }) => {
+          document
+            .querySelector(".box")
+            .classList.toggle("on");
+        });
+    </script>
   </body>
 </html>

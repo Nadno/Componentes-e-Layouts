@@ -13,12 +13,16 @@ body {
   font-family: sans-serif;
 }
 
-.box .menu:first-child {
+.box > .menu:last-child {
   height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 25%;
+}
+
+.box__toggle {
+  display: none;
 }
 
 .menu {
@@ -27,37 +31,43 @@ body {
 
   &__item {
     position: relative;
-    display: block;
     height: 100%;
     width: 100%;
     max-width: 300px;
 
+    padding-left: 0.2rem;
+    border-bottom: 0.3rem solid gray;
+    transition: border-bottom 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #363636;
+
+    cursor: pointer;
+    
     a {
-      width: 100%;
-      height: 100%;
+      width: inherit;
+      height: inherit;
+      font-size: inherit;
+      color: inherit;
 
-      display: flex;
-      align-items: center;
-      font-size: 1.2rem;
-      color: #363636;
-      padding-left: 0.2rem;
-      border-bottom: 0.3rem solid gray;
+      display: inherit;
+      align-items: inherit;
 
-      text-decoration: none;
-
-      transition: border-bottom 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      text-decoration: none; 
     }
 
-    a:hover,
-    a:focus {
+    &:hover,
+    &:focus {
       border-bottom: 0.3rem solid tomato;
       color: tomato;
       outline: none;
     }
 
     
-    a:focus + .menu--sub,
-    a:hover + .menu--sub,
+    &:focus-within .menu--sub,
+    &:hover .menu--sub,
     .menu--sub:hover,
     .menu--sub:focus-within {
       visibility: visible;
@@ -69,13 +79,13 @@ body {
 
     display: flex;
     flex-direction: column;
+    box-shadow: 1px 1px 4px black;
 
     z-index: 10;
     left: 0;
     top: 140%;
 
     visibility: hidden;
-
     transition: visibility 50ms 0.3s;
 
     &::after {
@@ -93,6 +103,95 @@ body {
 
     a {
       padding: 0.5rem;
+    }
+  }
+}
+
+
+@media (max-width: 700px) {
+  .box {
+    position: fixed;
+    width: 3.4rem;
+    height: 3.4rem;
+    overflow: hidden;
+    
+    transition: height, width, 0.4s;
+
+    &__toggle {
+      width: 3.4rem;
+      height: 3.4rem;
+      background-color: #f5f5f5;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      border: none;
+      padding: 0.8rem 0;
+
+      transition: background-color 0.4s;
+
+      cursor: pointer;
+
+      span {
+        width: 60%;
+        height: 0.3rem;
+        border-radius: 0.4rem;
+        background-color: #363636;
+
+        transition: transform 0.4s;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    & > .menu:last-child {
+      width: 90%;
+      height: 50%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 1.4rem;
+      margin: 5rem auto;
+
+      box-shadow: 1px 1px 4px black;
+      border-radius: 1rem;
+    }
+  }
+
+  .box.on {
+    width: 100vw;
+    height: 100vh;
+
+    .box__toggle {
+      background-color: transparent;
+
+      span {
+        background-color: tomato;
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:first-child {
+        transform: rotate(45deg) translate(8px, 8px);
+      }
+
+      span:last-child {
+        transform: rotate(-45deg) translate(8px, -8px);
+      }
+    }
+
+    & > .menu:last-child {
+      width: 90%;
+      height: 50%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 1.4rem;
+      margin: 5rem auto;
     }
   }
 }
