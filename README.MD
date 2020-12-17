@@ -1,9 +1,9 @@
-# Desafios CSS
-Este repositório guarda pequenos projetos com HTML, CSS e JS para criação de componentes, animações e páginas para fins de aprendizado.
+# Desafios e Componentes HTML, CSS e JS
+Este repositório guarda pequenos projetos com HTML, CSS e JS para fins de aprendizado.
 
 * ## Menus
-  As ideias para os menus foram retirados de um [coleção de menus](https://freefrontend.com/css-menu/ "135 CSS Menus") da página free frontend.
-  - Um accordion menu feito com HTML, CSS e JS, para a prática de criação [(código)](/accordion-menu): 
+  As ideias para os menus foram retiradas de uma [coleção de menus](https://freefrontend.com/css-menu/ "135 CSS Menus") da página free frontend.
+  - Um accordion menu feito com HTML, CSS e JS [(código)](/accordion-menu): 
   <h4 align="center"><img src="https://media.giphy.com/media/A47FC63rMzPZoKsEgI/giphy.gif" alt="Menu CSS" /></h4>
 
   - Barra de menu animada, utilizando HTML e CSS [(código)](/menu-bar).
@@ -33,7 +33,7 @@ Este repositório guarda pequenos projetos com HTML, CSS e JS para criação de 
   - Botão "don't push men":
   <h4 align="center"><img src="https://media.giphy.com/media/jIgOyMeFWUAOsVaQ46/giphy.gif" alt="botão HTML e CSS" /></h4>
 
-  - Divs hover effect:
+  - Divs hover effect [(código)](/divs-hover-effect):
   <h4 align="center"><img src="https://media.giphy.com/media/X6SojjYHBvkTxJo06O/giphy.gif" alt="Divs hover effect" /></h4>
 
 * ## Easybank: [Uma landing page com utilização do mobile first](/easybank-landing-page "Easybank").
