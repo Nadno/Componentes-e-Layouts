@@ -4,22 +4,23 @@ Este repositório guarda pequenos projetos com HTML, CSS e JS para criação de 
 * ## Menus
 As ideias para os menus foram retirados de um [coleção de menus](https://freefrontend.com/css-menu/ "135 CSS Menus") da página free frontend.
   - Um accordion menu feito com HTML, CSS e JS, para a prática de criação [(código)](/accordion-menu): 
-  <h1 align="center"><img src="https://media.giphy.com/media/A47FC63rMzPZoKsEgI/giphy.gif" alt="Menu CSS" /></h1>
+  <h4 align="center"><img src="https://media.giphy.com/media/A47FC63rMzPZoKsEgI/giphy.gif" alt="Menu CSS" /></h4>
 
   - Barra de menu animada, utilizando HTML e CSS [(código)](/menu-bar).
+  <h4 align="center">
+    <img src="https://media.giphy.com/media/Qfj66lvyKT7qIMn93F/giphy.gif" alt="Menu CSS" />
+    <img src="https://media.giphy.com/media/5J825qLBfmAin8VB7r/giphy.gif" alt="Menu CSS" />
+  </h4>
 
-  ![Menu CSS](https://media.giphy.com/media/Qfj66lvyKT7qIMn93F/giphy.gif)
-  ![Menu CSS](https://media.giphy.com/media/5J825qLBfmAin8VB7r/giphy.gif)
+  - Menu simples [(código)](/simple-menu):
+  <h4 align="center"><img src="https://media.giphy.com/media/HYAB0Ck03FGxGETWHr/giphy.gif" alt="Menu CSS" /></h4>
+  <h4 align="center"><img src="https://media.giphy.com/media/Bdi38EfoehzyazWqmd/giphy.gif" alt="Menu CSS" /></h4>
 
-  - Menu simples:
-  <h1 align="center"><img src="https://media.giphy.com/media/HYAB0Ck03FGxGETWHr/giphy.gif" /></h1>
-  <h1 align="center"><img src="https://media.giphy.com/media/Bdi38EfoehzyazWqmd/giphy.gif" alt="Menu CSS" /></h1>
-
-  - Menu com hexágonos:
-  <h1 align="center"><img src="https://media.giphy.com/media/2WTFRjmxR8bUsZYlvN/giphy.gif" alt="Menu CSS" /></h1>
+  - Menu com hexágonos [(código)](/hexagon):
+  <h4 align="center"><img src="https://media.giphy.com/media/2WTFRjmxR8bUsZYlvN/giphy.gif" alt="Menu CSS" /></h4>
 
 * ## Componentes animados
-As ideias dos botões também foram retiradas de uma [coleção](https://freefrontend.com/css-buttons/) do site free frontend.
+As ideias dos botões também foram retiradas de uma [coleção](https://freefrontend.com/css-buttons/) do site free frontend. [(código)](/buttons).
   - Botão play Valorant:
   <h4 align="center"><img src="https://media.giphy.com/media/flEG9etQSLq9Soyke5/giphy.gif" alt="botão HTML e CSS" /></h4>
 
