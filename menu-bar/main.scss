@@ -56,7 +56,8 @@ body {
       transition: transform 0.5s linear;
     }
 
-    &:focus {
+    &:focus,
+    &:hover {
       outline: none;
       span {
         background-color: goldenrod;
@@ -88,7 +89,8 @@ body {
     color: #363636;
     font-weight: bold;
 
-    &:focus {
+    &:focus,
+    &:hover {
       color: goldenrod;
       outline: none;
     }

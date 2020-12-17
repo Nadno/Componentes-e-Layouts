@@ -70,11 +70,11 @@ body {
   transition: transform 0.5s linear, -webkit-transform 0.5s linear;
 }
 
-.menu__button:focus {
+.menu__button:focus, .menu__button:hover {
   outline: none;
 }
 
-.menu__button:focus span {
+.menu__button:focus span, .menu__button:hover span {
   background-color: goldenrod;
 }
 
@@ -112,7 +112,7 @@ body {
   font-weight: bold;
 }
 
-.menu__link:focus {
+.menu__link:focus, .menu__link:hover {
   color: goldenrod;
   outline: none;
 }
