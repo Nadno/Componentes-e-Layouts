@@ -16,7 +16,7 @@
 
 html {
   font-size: 62.5%;
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
   background-color: var(--color-light-grayish-blue);
 }
 
@@ -27,20 +27,21 @@ body {
   padding-bottom: 1rem;
 }
 
-main {
+.testimonials {
   position: relative;
   padding: 4rem 2.4rem;
 }
 
 .testimonial__comment p::before {
-  content: '\201C';
+  content: "\201C";
 }
 
 .testimonial__comment p::after {
-  content: '\201D';
+  content: "\201D";
 }
 
 .testimonial {
+  display: block;
   padding: 3rem;
   border-radius: 0.8rem;
   margin-bottom: 2.4rem;
@@ -48,7 +49,7 @@ main {
 }
 
 .testimonials > :nth-child(1) {
-  background-image: url('./images/bg-pattern-quotation.svg');
+  background-image: url("./images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position: 80% 0;
 }
@@ -73,7 +74,7 @@ main {
 .user__photo {
   height: 4rem;
   border-radius: 50%;
-  border: 0.3rem solid #9265D5;
+  border: 0.3rem solid #9265d5;
   margin-right: 2rem;
 }
 
@@ -88,23 +89,24 @@ main {
 
 .user__info > :first-child {
   font-weight: bold;
+  font-size: 1.6rem;
 }
 
 .testimonial__tittle {
   display: block;
-  font-size: 2.3rem;
+  font-size: 1.6rem;
 }
 
 .testimonial--violet {
-  background-color: #733FC8;
+  background-color: #733fc8;
 }
 
 .testimonial--gray {
-  background-color: #49556B;
+  background-color: #49556b;
 }
 
 .testimonial--dark-gray {
-  background-color: #18202D;
+  background-color: #18202d;
 }
 
 .testimonial--white {
@@ -113,15 +115,15 @@ main {
 
 .testimonial--white .testimonial__user a,
 .testimonial--white .testimonial__tittle {
-  color: #4A4F5C;
+  color: #4a4f5c;
 }
 
 .testimonial--white .testimonial__comment {
-  color: #7D7F86;
+  color: #7d7f86;
 }
 
 .testimonial--white .user__info > :last-child {
-  color: #4A4F5C;
+  color: #4a4f5c;
   opacity: 0.5;
 }
 
@@ -129,8 +131,28 @@ main {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.testimonials > :nth-child(1) {
+  grid-area: first;
+}
+
+.testimonials > :nth-child(2) {
+  grid-area: second;
+}
+
+.testimonials > :nth-child(3) {
+  grid-area: third;
+}
+
+.testimonials > :nth-child(4) {
+  grid-area: fourth;
+}
+.testimonials > :nth-child(5) {
+  grid-area: fifth;
 }
 
 @media (min-width: 750px) {
@@ -141,7 +163,7 @@ main {
   .testimonials {
     display: grid;
     grid-gap: 2rem;
-    grid-template-areas: 
+    grid-template-areas:
       "first first"
       "second third"
       "fourth fifth";
@@ -155,42 +177,23 @@ main {
     font-size: 2.4rem;
   }
 
-  .testimonials > :nth-child(1) {
-    grid-area: first;
-  }
-  
-  .testimonials > :nth-child(2) {
-    grid-area: second;
-  }
-  
-  .testimonials > :nth-child(3) {
-    grid-area: third;
-  }
-  
-  .testimonials > :nth-child(4) {
-    grid-area: fourth;
-  }
-  .testimonials > :nth-child(5) {
-    grid-area: fifth;
-  }
-
   @media (min-width: 900px) {
     .testimonials {
-      grid-template-areas: 
-      "first first second"
-      "third fourth fourth"
-      "fifth fifth fifth";
+      grid-template-areas:
+        "first first second"
+        "third fourth fourth"
+        "fifth fifth fifth";
     }
   }
 
   @media (min-width: 1100px) {
     .testimonials {
-      grid-template-areas: 
-      "first first second fifth"
-      "third fourth fourth fifth";
+      grid-template-areas:
+        "first first second fifth"
+        "third fourth fourth fifth";
     }
     .testimonials > :nth-child(5) {
-     max-width: 300px;
+      max-width: 300px;
     }
   }
 }
