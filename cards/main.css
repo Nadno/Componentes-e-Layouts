@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #696969;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  font-family: sans-serif;
+}
+
+.cards {
+  list-style: none;
+}
+
+.card {
+  --card-color: #232833;
+  height: 500px;
+  width: 300px;
+  -webkit-box-shadow: 2px 2px 4px var(--card-color);
+          box-shadow: 2px 2px 4px var(--card-color);
+  background-color: var(--card-color);
+}
+
+.card__user {
+  height: 300px;
+}
+
+.card__contact {
+  height: 200px;
+}
+
+.card__contact-actions {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__contact-actions .button {
+  --button-color: #67c9d1;
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  max-width: 200px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--button-color);
+  border: 4px solid var(--button-color);
+  overflow: hidden;
+  background-color: initial;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card__contact-actions .button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 105%;
+  bottom: -110%;
+  background-color: var(--button-color);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  z-index: -1;
+}
+
+.card__contact-actions .button:hover {
+  color: #f5f5f5;
+  border-color: #f5f5f5;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.card__contact-actions .button:hover::before {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.card__contact-actions .button:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+/*# sourceMappingURL=main.css.map */
