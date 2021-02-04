@@ -23,11 +23,42 @@ body {
 }
 
 .cards {
+  width: 90vw;
   list-style: none;
+  display: flex;
+  padding: 2rem 0;
+  overflow-x: scroll;
+
+  .card-container {
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: translateY(-1rem);
+    }
+  
+    &:hover~.card-container {
+      transform: translateX(10rem);
+    }
+
+    &:not(:first-child) {
+      margin-left: -10rem;
+    }
+  }
+
+
+  &::-webkit-scrollbar {
+    height: 1rem;
+    background-color: #161a20;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #67c9d1;
+  }
 }
 
 .card {
   --card-color: #232833;
+  position: relative;
   width: 300px;
   height: 500px;
   max-height: 500px;
@@ -36,7 +67,7 @@ body {
   justify-content: center;
   grid-template-rows: repeat(2, auto);
 
-  box-shadow: 2px 2px 4px var(--card-color);
+  box-shadow: -1rem 0 3rem black;
   background-color: var(--card-color);
 
   & > :nth-child(1n) {

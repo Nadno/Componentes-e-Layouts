@@ -23,11 +23,49 @@ body {
 }
 
 .cards {
+  width: 90vw;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem 0;
+  overflow-x: scroll;
+}
+
+.cards .card-container {
+  position: relative;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.cards .card-container:hover {
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.cards .card-container:hover ~ .card-container {
+  -webkit-transform: translateX(10rem);
+          transform: translateX(10rem);
+}
+
+.cards .card-container:not(:first-child) {
+  margin-left: -10rem;
+}
+
+.cards::-webkit-scrollbar {
+  height: 1rem;
+  background-color: #161a20;
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background-color: #67c9d1;
 }
 
 .card {
   --card-color: #232833;
+  position: relative;
   width: 300px;
   height: 500px;
   max-height: 500px;
@@ -38,8 +76,8 @@ body {
           justify-content: center;
   -ms-grid-rows: (auto)[2];
       grid-template-rows: repeat(2, auto);
-  -webkit-box-shadow: 2px 2px 4px var(--card-color);
-          box-shadow: 2px 2px 4px var(--card-color);
+  -webkit-box-shadow: -1rem 0 3rem black;
+          box-shadow: -1rem 0 3rem black;
   background-color: var(--card-color);
 }
 
