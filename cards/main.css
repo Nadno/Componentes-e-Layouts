@@ -8,12 +8,13 @@
 :root {
   font-size: 62.5%;
   font-family: Arial, Helvetica, sans-serif;
+  --container-max-width: 250px;
 }
 
 body {
   height: 100%;
-  min-height: 100vh;
   width: 100vw;
+  min-height: 100vh;
   background-color: #696969;
   display: -ms-grid;
   display: grid;
@@ -27,30 +28,90 @@ body {
 
 .card {
   --card-color: #232833;
-  height: 500px;
   width: 300px;
+  height: 500px;
+  max-height: 500px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
   -webkit-box-shadow: 2px 2px 4px var(--card-color);
           box-shadow: 2px 2px 4px var(--card-color);
   background-color: var(--card-color);
 }
 
+.card > :nth-child(1n) {
+  max-width: var(--container-max-width);
+}
+
 .card__user {
-  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 2rem;
+}
+
+.card__avatar {
+  height: 15rem;
+  border-radius: 50%;
+  border: 0.5rem solid #161a20;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card__user-info {
+  width: 100%;
+  color: #f5f5f5;
+}
+
+.card__user-info .name {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.card__user-info .posts-and-likes {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card__contact {
-  height: 250px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 5rem auto;
+      grid-template-rows: 5rem auto;
 }
 
 .card__social-medias {
-  height: 40%;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -107,7 +168,6 @@ body {
 }
 
 .card__contact-actions {
-  height: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
