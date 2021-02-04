@@ -131,7 +131,7 @@ body {
 }
 
 .card__social-medias .media-link::before {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   width: 100%;
@@ -183,7 +183,7 @@ body {
           align-items: center;
 }
 
-.card__contact-actions .button {
+.button {
   --button-color: #67c9d1;
   position: relative;
   width: 100%;
@@ -193,21 +193,24 @@ body {
   font-weight: bold;
   color: var(--button-color);
   border: 4px solid var(--button-color);
-  overflow: hidden;
   background-color: initial;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   cursor: pointer;
 }
 
-.card__contact-actions .button::before {
-  content: "";
+.button.--background-effect {
+  overflow: hidden;
+}
+
+.button.--background-effect::before {
+  content: '';
   display: block;
   position: absolute;
   width: 100%;
   height: 105%;
   bottom: -110%;
-  background-color: var(--button-color);
+  background-color: purple;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
@@ -215,20 +218,118 @@ body {
   z-index: -1;
 }
 
-.card__contact-actions .button:hover {
+.button.--background-effect:hover {
   color: #f5f5f5;
   border-color: #f5f5f5;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-.card__contact-actions .button:hover::before {
+.button.--background-effect:hover::before {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
 }
 
-.card__contact-actions .button:active {
+.button.--background-effect:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+.button.--border-effect::before {
+  -webkit-clip-path: polygon(100% 90%, 100% 90%, 100% 100%, 100% 100%, 100% 100%, 100% 90%);
+          clip-path: polygon(100% 90%, 100% 90%, 100% 100%, 100% 100%, 100% 100%, 100% 90%);
+}
+
+.button.--border-effect::after {
+  -webkit-clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 98% 100%, 98% 100%, 98% 100%);
+          clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 98% 100%, 98% 100%, 98% 100%);
+}
+
+.button.--border-effect::before, .button.--border-effect::after {
+  --border-width: 8px;
+  content: '';
+  position: absolute;
+  display: block;
+  height: calc(100% + var(--border-width));
+  width: calc(100% + var(--border-width));
+  will-change: clip-path;
+  background-color: purple;
+  bottom: -4px;
+  right: -4px;
+  z-index: -1;
+}
+
+.button.--border-effect:hover {
+  color: purple;
+}
+
+@-webkit-keyframes right-side-border {
+  0% {
+    -webkit-clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 98% 100%, 98% 100%, 98% 100%);
+            clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 98% 100%, 98% 100%, 98% 100%);
+  }
+  50% {
+    -webkit-clip-path: polygon(98% 0, 100% 0, 100% 100%, 98% 100%, 98% 4px, 98% 4px);
+            clip-path: polygon(98% 0, 100% 0, 100% 100%, 98% 100%, 98% 4px, 98% 4px);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 98% 100%, 98% 4px, 0 4px);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 98% 100%, 98% 4px, 0 4px);
+  }
+}
+
+@keyframes right-side-border {
+  0% {
+    -webkit-clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 98% 100%, 98% 100%, 98% 100%);
+            clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 98% 100%, 98% 100%, 98% 100%);
+  }
+  50% {
+    -webkit-clip-path: polygon(98% 0, 100% 0, 100% 100%, 98% 100%, 98% 4px, 98% 4px);
+            clip-path: polygon(98% 0, 100% 0, 100% 100%, 98% 100%, 98% 4px, 98% 4px);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 98% 100%, 98% 4px, 0 4px);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 98% 100%, 98% 4px, 0 4px);
+  }
+}
+
+@-webkit-keyframes left-side-border {
+  0% {
+    -webkit-clip-path: polygon(100% 90%, 100% 90%, 100% 100%, 100% 100%, 100% 100%, 100% 90%);
+            clip-path: polygon(100% 90%, 100% 90%, 100% 100%, 100% 100%, 100% 100%, 100% 90%);
+  }
+  50% {
+    -webkit-clip-path: polygon(4px 90%, 100% 90%, 100% 100%, 0 100%, 0 90%, 4px 90%);
+            clip-path: polygon(4px 90%, 100% 90%, 100% 100%, 0 100%, 0 90%, 4px 90%);
+  }
+  100% {
+    -webkit-clip-path: polygon(4px 90%, 100% 90%, 100% 100%, 0 100%, 0 0, 4px 0);
+            clip-path: polygon(4px 90%, 100% 90%, 100% 100%, 0 100%, 0 0, 4px 0);
+  }
+}
+
+@keyframes left-side-border {
+  0% {
+    -webkit-clip-path: polygon(100% 90%, 100% 90%, 100% 100%, 100% 100%, 100% 100%, 100% 90%);
+            clip-path: polygon(100% 90%, 100% 90%, 100% 100%, 100% 100%, 100% 100%, 100% 90%);
+  }
+  50% {
+    -webkit-clip-path: polygon(4px 90%, 100% 90%, 100% 100%, 0 100%, 0 90%, 4px 90%);
+            clip-path: polygon(4px 90%, 100% 90%, 100% 100%, 0 100%, 0 90%, 4px 90%);
+  }
+  100% {
+    -webkit-clip-path: polygon(4px 90%, 100% 90%, 100% 100%, 0 100%, 0 0, 4px 0);
+            clip-path: polygon(4px 90%, 100% 90%, 100% 100%, 0 100%, 0 0, 4px 0);
+  }
+}
+
+.button.--border-effect:hover::after {
+  -webkit-animation: right-side-border 0.5s ease-in forwards;
+          animation: right-side-border 0.5s ease-in forwards;
+}
+
+.button.--border-effect:hover::before {
+  -webkit-animation: left-side-border 0.5s ease-in forwards;
+          animation: left-side-border 0.5s ease-in forwards;
 }
 /*# sourceMappingURL=main.css.map */
