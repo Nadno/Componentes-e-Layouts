@@ -49,34 +49,48 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: -webkit-transform .4s;
-  transition: -webkit-transform .4s;
-  transition: transform .4s;
-  transition: transform .4s, -webkit-transform .4s;
+  -webkit-transition: -webkit-transform .8s, -webkit-filter 0.8s;
+  transition: -webkit-transform .8s, -webkit-filter 0.8s;
+  transition: transform .8s, filter 0.8s;
+  transition: transform .8s, filter 0.8s, -webkit-transform .8s, -webkit-filter 0.8s;
+}
+
+.card .background {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.55;
+  bottom: -50px;
+  right: -50px;
+  z-index: 5;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
 }
 
 .card__container {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #363636ab;
   top: 0;
   right: 0;
-  -webkit-clip-path: circle(0 at 100% 100%);
-          clip-path: circle(0 at 100% 100%);
-  -webkit-transition: -webkit-clip-path 1s ease;
-  transition: -webkit-clip-path 1s ease;
-  transition: clip-path 1s ease;
-  transition: clip-path 1s ease, -webkit-clip-path 1s ease;
-}
-
-.card:hover .card__container {
-  -webkit-clip-path: circle(142% at 100% 100%);
-          clip-path: circle(142% at 100% 100%);
+  z-index: 10;
 }
 
 .card:hover .card__image {
-  -webkit-transform: rotate(10deg) scale(1.25);
-          transform: rotate(10deg) scale(1.25);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  -webkit-transform: rotate(20deg) scale(1.5);
+          transform: rotate(20deg) scale(1.5);
+}
+
+.card:hover .background {
+  -webkit-transform: scale(5) translate(-20px, -30px);
+          transform: scale(5) translate(-20px, -30px);
 }
 /*# sourceMappingURL=main.css.map */

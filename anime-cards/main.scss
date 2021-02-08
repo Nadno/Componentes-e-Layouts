@@ -40,29 +40,43 @@ body {
   &__image {
     height: 100%;
     object-fit: cover;
-    transition: transform .4s;
+    transition: transform .8s, filter 0.8s;
+  }
+
+  .background {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: 50%;
+    background-color: #fff;
+
+    opacity: 0.55;
+    bottom: -50px;
+    right: -50px;
+    z-index: 5;
+    transform: scale(0);
+    transition: transform 0.8s;
   }
 
   &__container {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #363636ab;
+
     top: 0;
     right: 0;
-
-    clip-path: circle(0 at 100% 100%);
-    transition: clip-path 1s ease;
-    
+    z-index: 10;
   }
   
   &:hover {
-    .card__container {
-      clip-path: circle(142% at 100% 100%);
+    .card__image {
+      filter: blur(3px);
+      transform: rotate(20deg) scale(1.5);
     }
 
-    .card__image {
-      transform: rotate(10deg) scale(1.25);
+    .background {
+      transform: scale(5) translate(-20px, -30px);
     }
   }
 }
