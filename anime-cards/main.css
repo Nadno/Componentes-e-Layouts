@@ -1,0 +1,82 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #363636;
+}
+
+.cards {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.card {
+  height: 32rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card__link {
+  position: relative;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.card__image {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+}
+
+.card__container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #363636ab;
+  top: 0;
+  right: 0;
+  -webkit-clip-path: circle(0 at 100% 100%);
+          clip-path: circle(0 at 100% 100%);
+  -webkit-transition: -webkit-clip-path 1s ease;
+  transition: -webkit-clip-path 1s ease;
+  transition: clip-path 1s ease;
+  transition: clip-path 1s ease, -webkit-clip-path 1s ease;
+}
+
+.card:hover .card__container {
+  -webkit-clip-path: circle(142% at 100% 100%);
+          clip-path: circle(142% at 100% 100%);
+}
+
+.card:hover .card__image {
+  -webkit-transform: rotate(10deg) scale(1.25);
+          transform: rotate(10deg) scale(1.25);
+}
+/*# sourceMappingURL=main.css.map */
