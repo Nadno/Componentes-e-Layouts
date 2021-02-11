@@ -13,6 +13,7 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #363636;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .cards {
@@ -25,22 +26,16 @@ body {
 }
 
 .card {
-  height: 32rem;
+  position: relative;
+  height: 400px;
   overflow: hidden;
-  box-shadow: 
-    0 0 16px 8px rgba(0, 0, 0, 0.3);
-
-  &__link {
-    position: relative;
-    display: block;
-    height: 100%;
-    text-decoration: none;
-  }
+  box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.3), 0 0 0 4px #fff;
+  transition: box-shadow 0.8s ease-in-out;
 
   &__image {
     height: 100%;
     object-fit: cover;
-    transition: transform .8s, filter 0.8s;
+    transition: transform 0.8s, filter 0.8s;
   }
 
   .background {
@@ -59,24 +54,85 @@ body {
     transition: transform 0.8s;
   }
 
-  &__container {
+  .content {
     position: absolute;
     width: 100%;
     height: 100%;
 
+    padding: 1rem;
+    opacity: 0;
+    color: #212121;
+
     top: 0;
     right: 0;
     z-index: 10;
+
+    transition: opacity 0.8s ease-in;
+
+    &__age-rating {
+      display: block;
+      font-size: 2rem;
+      text-align: right;
+    }
+
+    &__more {
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4rem;
+
+      .more-link {
+        width: 200px;
+        height: 4rem;
+        border: none;
+        display: block;
+        background-color: #303f9f;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #fff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-top: 8rem;
+
+      font-size: 1.6rem;
+
+      h4 {
+        font-size: 2.4rem;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
   }
-  
+
   &:hover {
+    box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.3), 0 0 0 4px #3f51b5;
+
     .card__image {
       filter: blur(3px);
       transform: rotate(20deg) scale(1.5);
     }
 
+    .content {
+      opacity: 1;
+    }
+
     .background {
-      transform: scale(5) translate(-20px, -30px);
+      transform: scale(5) translate(-30px, -40px);
     }
   }
 }
