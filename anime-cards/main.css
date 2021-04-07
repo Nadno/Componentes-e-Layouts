@@ -54,18 +54,19 @@ body {
   transition: transform 0.8s, filter 0.8s, -webkit-transform 0.8s, -webkit-filter 0.8s;
 }
 
-.card .background {
+.card .overlay {
   position: absolute;
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
-  background-color: #fff;
-  opacity: 0.55;
-  bottom: -50px;
-  right: -50px;
+  background-color: rgba(0, 0, 0, 0.45);
+  bottom: -5rem;
+  right: -12rem;
   z-index: 5;
   -webkit-transform: scale(0);
           transform: scale(0);
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
   -webkit-transition: -webkit-transform 0.8s;
   transition: -webkit-transform 0.8s;
   transition: transform 0.8s;
@@ -131,6 +132,11 @@ body {
   cursor: pointer;
 }
 
+.card .content__more .more-link:hover {
+  -webkit-filter: brightness(125%);
+          filter: brightness(125%);
+}
+
 .card .content__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,8 +177,8 @@ body {
   opacity: 1;
 }
 
-.card:hover .background {
-  -webkit-transform: scale(5) translate(-30px, -40px);
-          transform: scale(5) translate(-30px, -40px);
+.card:hover .overlay {
+  -webkit-transform: scale(5.5);
+          transform: scale(5.5);
 }
 /*# sourceMappingURL=main.css.map */

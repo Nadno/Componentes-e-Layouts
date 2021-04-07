@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" />
 
-  <title>Anime card</title>
-</head>
-<body>
+    <title>Anime card</title>
+  </head>
+  <body>
+    <ul class="cards">
+      <li class="card">
+        <img
+          class="card__image"
+          src="https://sm.ign.com/ign_br/screenshot/default/kimetsu_6jp8.jpg"
+          alt="card"
+        />
 
-  <ul class="cards">
-    <li class="card">
-
-        <img class="card__image" src="https://sm.ign.com/ign_br/screenshot/default/kimetsu_6jp8.jpg" alt="card">
-        <div class="background"></div>
         <div class="content">
           <span class="content__age-rating">14+</span>
           <div class="content__info">
@@ -30,8 +32,9 @@
             <a class="more-link">Trailer</a>
           </footer>
         </div>
-    </li>
-  </ul>
-  
-</body>
+
+        <div class="overlay"></div>
+      </li>
+    </ul>
+  </body>
 </html>

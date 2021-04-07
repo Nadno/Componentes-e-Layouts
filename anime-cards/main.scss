@@ -38,19 +38,19 @@ body {
     transition: transform 0.8s, filter 0.8s;
   }
 
-  .background {
+  .overlay {
     position: absolute;
     width: 10rem;
     height: 10rem;
 
     border-radius: 50%;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.45);
 
-    opacity: 0.55;
-    bottom: -50px;
-    right: -50px;
+    bottom: -5rem;
+    right: -12rem;
     z-index: 5;
     transform: scale(0);
+    transform-origin: right bottom;
     transition: transform 0.8s;
   }
 
@@ -97,6 +97,10 @@ body {
         justify-content: center;
         align-items: center;
         cursor: pointer;
+
+        &:hover {
+          filter: brightness(125%);
+        }
       }
     }
 
@@ -131,8 +135,8 @@ body {
       opacity: 1;
     }
 
-    .background {
-      transform: scale(5) translate(-30px, -40px);
+    .overlay {
+      transform: scale(5.5);
     }
   }
 }
