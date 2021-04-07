@@ -24,6 +24,8 @@ svg {
 }
 
 .menu {
+  --content-height: 0;
+  --category-item: 0;
   max-width: 300px;
   list-style: none;
   margin: 6rem auto;
@@ -42,6 +44,7 @@ svg {
 
 .menu .category {
   width: 100%;
+  height: auto;
   overflow: hidden;
 }
 
@@ -76,19 +79,28 @@ svg {
 }
 
 .menu .category__content {
-  height: 0;
+  height: var(--content-height);
   visibility: hidden;
   overflow: hidden;
   list-style: none;
-  -webkit-transition: height, visibility 0.5s, 0.5s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: height, visibility 0.5s, 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-transition: height 200ms linear, visibility 200ms linear;
+  transition: height 200ms linear, visibility 200ms linear;
 }
 
 .menu .category__content li {
   height: 1.8rem;
+  opacity: 0;
   width: 100%;
   background-color: #363636;
   border-bottom: 1px solid gray;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: opacity 200ms linear, -webkit-transform 200ms linear;
+  transition: opacity 200ms linear, -webkit-transform 200ms linear;
+  transition: transform 200ms linear, opacity 200ms linear;
+  transition: transform 200ms linear, opacity 200ms linear, -webkit-transform 200ms linear;
   cursor: pointer;
 }
 
@@ -112,6 +124,11 @@ svg {
   background-color: #aaaaaa;
 }
 
+.menu .category.on {
+  --content-height: 100%;
+  --category-item: 1.8rem;
+}
+
 .menu .category.on svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -119,6 +136,12 @@ svg {
 
 .menu .category.on .category__content {
   visibility: visible;
+}
+
+.menu .category.on .category__content li {
+  opacity: 1;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 
 .menu > .category:not(:last-child) .category__label {
