@@ -4,8 +4,8 @@ O design dos layouts foram retirados de desafios do site [frontend mentor](https
 
 ## Landing pages
 
-- Easybank: [Uma landing page aplicando mobile first](/easybank-landing-page 'Easybank').
-  ![](/easybank-landing-page/desktop.png)
+- Easybank: [Uma landing page aplicando mobile first](/layouts/easybank-landing-page 'Easybank').
+  ![](/layouts/easybank-landing-page/desktop.png)
 
 - ChatApp: [Um simples desafio de HTML e CSS](/chat-app-css 'ChatApp').
   ![](/chat-app-css/desktop.png)
