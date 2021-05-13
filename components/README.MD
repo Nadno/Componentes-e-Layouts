@@ -43,5 +43,5 @@ O design e animações dos componentes foram retirados de coletâneas no site [f
 - Botão "don't push me":
 <p align="center"><img src="https://media.giphy.com/media/jIgOyMeFWUAOsVaQ46/giphy.gif" alt="botão HTML e CSS" /></p>
 
-- Divs hover effect [(código)](/divs-hover-effect):
+- Divs hover effect [(código)](/components/divs-hover-effect):
 <p align="center"><img src="https://media.giphy.com/media/X6SojjYHBvkTxJo06O/giphy.gif" alt="Divs hover effect" /></p>
