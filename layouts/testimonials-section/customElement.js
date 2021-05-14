@@ -1,30 +1,24 @@
 class TestimonialSection extends HTMLElement {
   constructor() {
     super();
-    const title = this.getAttribute("testimonial-title");
-    const name = this.getAttribute("user-name");
-    const image = this.getAttribute("photo");
-    const color = this.getAttribute("color");
+
     const content = this.textContent;
 
-    this.removeAttribute("testimonial-title");
-    this.removeAttribute("user-name");
-    this.removeAttribute("photo");
-    this.removeAttribute("color");
-    
+    const { title, name, photo, color } = this.props;
 
-    this.innerHTML = "";
-    
+    this.innerHTML = '';
 
-    this.classList.add("testimonial");
+    this.classList.add('testimonial');
     this.classList.add(`testimonial--${color}`);
 
-    this.insertAdjacentHTML("afterbegin", `
+    this.insertAdjacentHTML(
+      'beforeend',
+      `
       <div class="testimonial__user">
         <a href="#">
           <img
             class="user__photo"
-            src="${image}"
+            src="${photo}"
             alt="User photo"
           />
           <div class="user__info">
@@ -43,8 +37,16 @@ class TestimonialSection extends HTMLElement {
           ${content}
         </p>
       </blockquote>
-    `);
+    `
+    );
+  }
+
+  get props() {
+    const data = Object.assign({}, this.dataset);
+    Object.keys(data).forEach(key => this.removeAttribute(`data-${key}`));
+
+    return data;
   }
 }
 
-customElements.define("testimonial-section", TestimonialSection);
+customElements.define('testimonial-section', TestimonialSection);
