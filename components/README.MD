@@ -13,20 +13,20 @@ O design e animações dos componentes foram retirados de coletâneas no site [f
 
 ## Menus
 
-- Um accordion menu feito com HTML, CSS e JS [(código)](/accordion-menu):
+- Um accordion menu feito com HTML, CSS e JS [(código)](/components/accordion-menu):
 <p align="center"><img src="https://media.giphy.com/media/A47FC63rMzPZoKsEgI/giphy.gif" alt="Menu CSS" /></p>
 
-- Barra de menu animada, utilizando HTML e CSS [(código)](/menu-bar).
+- Barra de menu animada, utilizando HTML e CSS [(código)](/components/menu-bar).
 <p align="center">
   <img src="https://media.giphy.com/media/Qfj66lvyKT7qIMn93F/giphy.gif" alt="Menu CSS" />
   <img src="https://media.giphy.com/media/5J825qLBfmAin8VB7r/giphy.gif" alt="Menu CSS" />
 </p>
 
-- Menu simples [(código)](/simple-menu):
+- Menu simples [(código)](/components/simple-menu):
 <p align="center"><img src="https://media.giphy.com/media/HYAB0Ck03FGxGETWHr/giphy.gif" alt="Menu CSS" /></p>
 <p align="center"><img src="https://media.giphy.com/media/Bdi38EfoehzyazWqmd/giphy.gif" alt="Menu CSS" /></p>
 
-- Menu com hexágonos [(código)](/hexagon):
+- Menu com hexágonos [(código)](/components/hexagon):
 <p align="center"><img src="https://media.giphy.com/media/2WTFRjmxR8bUsZYlvN/giphy.gif" alt="Menu CSS" /></p>
 
 ## Botões e outros
@@ -43,5 +43,5 @@ O design e animações dos componentes foram retirados de coletâneas no site [f
 - Botão "don't push me":
 <p align="center"><img src="https://media.giphy.com/media/jIgOyMeFWUAOsVaQ46/giphy.gif" alt="botão HTML e CSS" /></p>
 
-- Divs hover effect [(código)](/divs-hover-effect):
+- Divs hover effect [(código)](/components/divs-hover-effect):
 <p align="center"><img src="https://media.giphy.com/media/X6SojjYHBvkTxJo06O/giphy.gif" alt="Divs hover effect" /></p>
