@@ -4,7 +4,7 @@ O design dos layouts foram retirados de desafios do site [frontend mentor](https
 
 ## Landing pages
 
-- Pawtastic: [Landing page & Formulário](https://github.com/Nadno/Pawtastic, 'Pawtastic')
+- Pawtastic: [Landing page & Formulário](https://github.com/Nadno/Pawtastic 'Pawtastic')
   <p align="center"><img src="https://media.giphy.com/media/hJKgptxoBEQuXh1vPC/giphy.gif" /></p>
 
 - Easybank: [Uma landing page aplicando mobile first](/layouts/easybank-landing-page 'Easybank').
