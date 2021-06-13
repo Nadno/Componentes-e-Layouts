@@ -227,69 +227,68 @@
       </section>
     </main>
 
-    <footer>
-      <section class="easy__bank">
-        <span class="logo__container">
-          <img class="logo" src="/images/sub-logo.svg" alt="Easybank" />
-          easybank
-        </span>
-        <section>
-          <nav>
-            <ul class="social__medias">
-              <li>
-                <a href="#"
-                  ><img src="images/icon-facebook.svg" alt="Facebook"
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images/icon-youtube.svg" alt="Youtube"
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images/icon-twitter.svg" alt="Twitter"
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images/icon-pinterest.svg" alt="Pinterest"
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images/icon-instagram.svg" alt="Instagram"
-                /></a>
-              </li>
-            </ul>
-          </nav>
-        </section>
-      </section>
-      <section class="about__us__container">
-        <nav>
-          <ul class="about__us">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+    <footer class="footer">
+      <div class="footer-content">
+        <address class="footer__address">
+          <div class="logo-container">
+            <img class="logo" src="/images/sub-logo.svg" alt="Easybank" />
+            easybank
+          </div>
+
+          <ul class="footer__social-medias">
+            <li>
+              <a href="#" class="social-media"
+                ><img src="images/icon-facebook.svg" alt="Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#" class="social-media"
+                ><img src="images/icon-youtube.svg" alt="Youtube"
+              /></a>
+            </li>
+            <li>
+              <a href="#" class="social-media"
+                ><img src="images/icon-twitter.svg" alt="Twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="#" class="social-media"
+                ><img src="images/icon-pinterest.svg" alt="Pinterest"
+              /></a>
+            </li>
+            <li>
+              <a href="#" class="social-media"
+                ><img src="images/icon-instagram.svg" alt="Instagram"
+              /></a>
+            </li>
           </ul>
-        </nav>
-      </section>
-      
-      <div class="copyright__container">
-        <button type="button" class="request__invite join__us__button">
-          Request Invite
-        </button>
-        <span class="copyright">© Easybank. All Right Reserved</span>
+        </address>
+
+        <ul class="footer__links">
+          <li><a href="#" class="content">About Us</a></li>
+          <li><a href="#" class="content">Contact</a></li>
+          <li><a href="#" class="content">Blog</a></li>
+          <li><a href="#" class="content">Careers</a></li>
+          <li><a href="#" class="content">Support</a></li>
+          <li><a href="#" class="content">Privacy Policy</a></li>
+        </ul>
+
+        <div class="footer__copyright">
+          <button type="button" class="button request__invite join__us__button">
+            Request Invite
+          </button>
+          <p class="copyright">© Easybank. All Right Reserved</p>
+        </div>
       </div>
     </footer>
 
     <script>
-      const toggleBt = document.querySelector("div.header__toggle");
-      toggleBt.onclick = () => {
-        toggleBt.classList.toggle("on");
+      "use strict";
+
+      var toggleBt = document.querySelector("div.header__toggle");
+
+      toggleBt.onclick = function () {
+        return toggleBt.classList.toggle("on");
       };
     </script>
   </body>
