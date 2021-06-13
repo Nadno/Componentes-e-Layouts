@@ -1,0 +1,58 @@
+@import "./theme";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 62.5%;
+
+  scrollbar-width: none;
+
+  @media screen and (min-width: 800px) {
+    font-size: 70%;
+  }
+}
+
+body {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+
+  padding-top: 6rem;
+  font-size: 1.6rem;
+  background-color: #fff;
+
+  .logo {
+    height: 2rem;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.intro,
+.header-limit,
+.why-easybank,
+.latest-articles,
+.footer-content {
+  max-width: 1316px;
+
+  margin: 0 auto;
+  padding: 6.4rem #{$body-margin};
+}
+
+@import './components/button';
+@import './components/content';
+@import './components/cause-card';
+@import './components/article-card';
+
+@import './layout/header';
+@import './layout/intro';
+@import './layout/why-easybank';
+@import './layout/latest-articles';
+@import './layout/footer';
