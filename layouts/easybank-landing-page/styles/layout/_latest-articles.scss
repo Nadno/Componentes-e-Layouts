@@ -1,0 +1,36 @@
+.latest-articles {
+  &__title {
+    font-size: 3.2rem;
+    line-height: calc(3.2rem * 1.2);
+    margin-bottom: 4rem;
+  }
+
+  @media screen and (min-width: 1315.98px) {
+    &__title {
+      text-align: left;
+    }
+  }
+}
+
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  list-style: none;
+
+  li {
+    padding: 0 0.8rem;
+    margin-bottom: 3.2rem;
+  }
+
+  @media screen and (min-width: 664px) {
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1315.98px) {
+    & > li:first-child {
+      padding-left: 0;
+    }
+  }
+}
