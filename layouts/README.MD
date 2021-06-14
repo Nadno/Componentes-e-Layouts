@@ -8,7 +8,7 @@ O design dos layouts foram retirados de desafios do site [frontend mentor](https
   <p align="center"><img src="https://media.giphy.com/media/hJKgptxoBEQuXh1vPC/giphy.gif" /></p>
 
 - Easybank: [Uma landing page aplicando mobile first](/layouts/easybank-landing-page 'Easybank').
-  ![](/layouts/easybank-landing-page/desktop.png)
+  <p align="center"><img src="https://media.giphy.com/media/2Mq2YfNFomJTcgp8Gb/giphy.gif" /></p>
 
 - ChatApp: [Um simples desafio de HTML e CSS](/layouts/chat-app-css 'ChatApp').
   ![](/layouts/chat-app-css/desktop.png)
