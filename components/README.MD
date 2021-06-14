@@ -8,6 +8,9 @@ O design e animações dos componentes foram retirados de coletâneas no site [f
 
 ## Cards
 
+- Clone de um **card** do [codepen](https://codepen.io/ahmadbassamemran/pen/XvdEoO) com __hover animation__:
+<p align="center"><img src="https://media.giphy.com/media/NpYROUrkoThKTpFoon/giphy.gif" alt="Anime card" /></p>
+
 - A animação da lista de cards foi retirada de um [tutorial](https://www.youtube.com/watch?v=29deL9MFfWc&t=300s&ab_channel=Fireship) no youtube. Os icones usados fazem parte do kit do site **fontawesome**.
 <p align="center"><img src="https://media.giphy.com/media/pzEm3FLtJ0inJIUL0i/giphy.gif" alt="card gif" /></p>
 
